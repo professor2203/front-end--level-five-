@@ -55,15 +55,20 @@ export default function Navbar() {
   return (
     <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
       <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: "inherit" }}>
+        {/* Logo and Links */}
         <Typography variant="h6" component="div"
           onMouseEnter={handleLogoMouseEnter}
-          onMouseLeave={handleLogoMouseLeave}>
-
+          onMouseLeave={handleLogoMouseLeave}
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
+          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="Logo" style={{ marginRight: '10px' }} />
         </Typography>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        
+        {/* Menu Icon and Links */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: "" }}>
           <div style={{ display: showLinks ? 'block' : 'none', textAlign: 'center' }}>
             {links.map((link, index) => (
-              <a key={index} href={link.url} style={{ marginRight: '10px', textDecoration: 'none', color: 'inherit' }}>
+              <a key={index} href={link.url} style={{ marginRight: '80px', textDecoration: 'none', color: 'inherit' }}>
                 {link.title}
               </a>
             ))}

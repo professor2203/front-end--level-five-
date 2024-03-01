@@ -1,5 +1,3 @@
-                              
-                              
 import { Grid, Typography, Link, Box } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 
@@ -22,17 +20,30 @@ export default function Footer() {
   }
 
   return (
-    <Grid container spacing={3}>
-      <Box sx={{ borderTop: ".5" }}></Box>
+    <Grid container spacing={3} sx={{ borderTop: '0.5px solid #ffffff', paddingTop: '2vh', paddingBottom: '2vh' }}>
       <Grid item xs={12} sm={6} md={4}>
-        <img src="./thumbnail_Master_logo_white 2.svg" alt="" style={{ maxHeight: "8vh" }} />
+      <Box
+  display="flex"
+  alignItems={{ xs: 'center', sm: 'flex-end' }}
+>
+  <img
+    src="./thumbnail_Master_logo_white 2.svg"
+    alt=""
+    style={{
+      maxHeight: { xs: '6vh', sm: '8vh' }, // Adjust based on screen size
+      maxWidth: '100%', // Ensure image doesn't exceed container width
+      width: 'auto', // Maintain aspect ratio
+      height: 'auto', // Maintain aspect ratio
+    }}
+  />
+</Box>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <Box sx={{ display: "flex", paddingTop: "2vh", justifyContent: "space-between" }}>
-          <Typography variant="body1" style={{ color: "#fff" }}>
+        <Box display="flex" justifyContent={{ xs: 'center', sm: 'center' }} paddingTop={{ xs: '2vh', sm: 0 }}>
+          <Typography variant="body1" style={{ color: "#fff", marginRight: '1rem' }}>
             <Link href="/support" color="inherit" underline="none">Support</Link>
           </Typography>
-          <Typography variant="body1" style={{ color: "#fff" }}>
+          <Typography variant="body1" style={{ color: "#fff", marginRight: '1rem' }}>
             <Link href="/privacy-policy" color="inherit" underline="none">Privacy Policy</Link>
           </Typography>
           <Typography variant="body1" style={{ color: "#fff" }}>
@@ -41,9 +52,11 @@ export default function Footer() {
         </Box>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <Typography sx={{ color: "#fff", textAlign: "end", paddingTop: "2vh" }}>
-          © 2020 UXTheme, All
-        </Typography>
+        <Box display="flex" justifyContent={{ xs: 'center', sm: 'flex-end' }} paddingTop={{ xs: '2vh', sm: 0 }}>
+          <Typography    sx={{ color: "#fff" }}>
+            © 2020 UXTheme, All
+          </Typography>
+        </Box>
       </Grid>
     </Grid>
   );

@@ -5,7 +5,7 @@ import Itsolution from "@/components/Itsolution";
 
 import Story from "@/components/Story";
 import Connect from "@/components/Connect";
-import Card from "@/components/Card";
+import ResponsiveCard from "@/components/ResponsiveCard";
 
 const Home = () => {
     return (
@@ -18,7 +18,7 @@ const Home = () => {
 <Header/>
         <Itsolution/>
         <Story/>
-     <Card/>
+     <ResponsiveCard/>
         <Connect/>
 
         </Layout>

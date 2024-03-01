@@ -1,52 +1,101 @@
 import React from 'react';
 import Container from './Container';
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box ,Button} from '@mui/material';
 
 export default function Itsolution() {
   return (
-    <div style={{ backgroundColor: "#ffff" }}>
+    <div style={{ backgroundColor: "#000" }}>
       <Container>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <Box padding="10vh">
-              About Us
-              <Typography
-                sx={{
-                  fontFamily: "",
-                  fontSize: { xs: "2.5vh", md: "3.5vh" }, // Responsive font size
-                  fontWeight: "600",
-                  lineHeight: "40px",
-                  letterSpacing: "0em",
-                  textAlign: "left",
-                  color:"#553EFF",
-                  gap:"vh"
-                }}
-              >
-                Tailored IT Solutions in Riyadh <br />
-                <span style={{ color:"#000" }}>Approach to Cost-Effectiveness</span>
-              </Typography>
-              <Typography sx={{borderBottom:"0.5vh solid #8868F9" ,maxWidth:"12vw" }}></Typography>
-            </Box>
+            
           </Grid>
           <Grid container spacing={2} sx={{paddingLeft:"5vh"}}>
             <Grid item xs={12} md={6}>
-              <Box sx={{paddingLeft:"7vh"}}>
-                <Typography sx={{textAlign:"", padding:""}}>
-                  We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
-                </Typography>
-              </Box>
+              <Box padding={{ xs: "vh ", md: "10vh" }}>
+              <Typography
+  sx={{
+    color: "#fff",
+    // Adjust font size based on breakpoints
+    fontSize: {
+      xs: "8px", // for extra-small screens
+      sm: "18px", // for small screens
+      md: "20px", // for medium screens
+      lg: "22px", // for large screens
+      xl: "24px"  // for extra-large screens
+    },
+    // Add other styles as needed
+  }}
+>
+  About Us
+</Typography>
+
+                 <Typography
+                   sx={{
+                     fontFamily: "",
+                     fontSize: { xs: "0.7vh", md: "3.5vh" },
+                     fontWeight: "600",
+                     lineHeight: "40px",
+                     letterSpacing: "0em",
+                     textAlign: "left",
+                     color:"#553EFF",
+                     gap:"vh"
+                   }}
+                 >
+                   Tailored IT Solutions in Riyadh <br />
+                   <span style={{ color:"#fff" }}>Approach to Cost-Effectiveness</span>
+                 </Typography>
+                 <Box sx={{ borderBottom:"0.5vh solid #8868F9" ,maxWidth:"12vw" }} />
+                 <Box sx={{
+  paddingTop: { xs: "2vh", sm: "3vh", md: "30vh" },
+  paddingLeft: { xs: "vh", sm: "vh", md: "vh" },
+paddingRight:  { xs: "6vh", sm: "vh"}
+}}>
+Copy code
+<Button 
+  variant="contained" 
+  sx={{
+    backgroundColor: "#553EFF",
+    width: { xs: '50%', sm: '40%' }, // Adjust width for different breakpoints
+    height: { xs: '25px', sm: '30px' } ,
+    fontSize: {
+      xs: "0.8vh", // Font size on extra-small screens
+      sm: "18px", // Font size on small screens
+      md: "7px"  // Font size on medium screens and above
+    }// Adjust height for different breakpoints
+  }}
+>
+  Explore Services
+</Button>
+                 </Box>
+              </Box>  
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box sx={{paddingLeft:"7vh",paddingBottom:"10vh"}}>
-                <Typography sx={{textAlign:""}}>
-                Headquartered in Riyadh, Kingdom of Saudi Arabia, Level Five is committed to providing innovative, tailored IT solutions by fostering strategic partnerships, leveraging external expertise, and optimizing resource allocation.
-                <br />
-                <br />
-
-We adopt a lean operating model centered around outsourcing and collaboration with IT consultancy partners, Level Five aims to maximize efficiency, reduce overhead costs, and deliver high-quality solutions to clients in Saudi Arabia.
+              <Box sx={{ paddingLeft: { xs: "0", md: "7vh" } }}>
+                <Typography sx={{ color:"#fff" }}>
+                  We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
                 </Typography>
+                <Box sx={{ height: "10vh" }} />
+                <Typography sx={{ color:"#fff" }}>
+                  Headquartered in Riyadh, Kingdom of Saudi Arabia, Level Five is committed to providing innovative, tailored IT solutions by fostering strategic partnerships, leveraging external expertise, and optimizing resource allocation.
+                  <br />
+                  <br />
+                  We adopt a lean operating model centered around outsourcing and collaboration with IT consultancy partners, Level Five aims to maximize efficiency, reduce overhead costs, and deliver high-quality solutions to clients in Saudi Arabia.
+                </Typography>
+                <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end", paddingRight: "5vh" }}>
+                  <img src="./Group 13.svg" alt="" />
+                </Box>
               </Box>
             </Grid>
+          </Grid>
+        </Grid>
+          
+        <Grid container spacing={2} sx={{paddingLeft:"5vh"}}>
+          <Grid item xs={12} md={6}>
+             
+          </Grid>
+          <Grid item xs={12} md={6}>
+            
           </Grid>
         </Grid>
       </Container>

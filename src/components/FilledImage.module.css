@@ -1,0 +1,49 @@
+
+.logoContainer {
+  /* width: 1725.6px;
+  height: 297.52px; */
+
+  position:absolute;
+  animation: fillLogo 4s forwards;
+  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
+}
+
+@keyframes fillLogo {
+  from {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+/* FilledImage.module.css */
+
+.smallScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 90%; /* Adjust the padding-top for small screens */
+}
+
+.largeScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20%; /* Default padding-top for large screens */
+}
+
+@media (min-width: 601px) {
+  .smallScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20%; /* Padding-top for screens larger than 600px */
+  }
+
+  .largeScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20%; /* Default padding-top for large screens */
+  }
+}

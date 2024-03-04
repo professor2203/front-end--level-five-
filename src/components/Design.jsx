@@ -161,10 +161,23 @@ export function Icon() {
   }, []);
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 650 900" fill="none" style={{ maxWidth: "100%", height: "auto" }}>
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 650 900"
+  fill="none"
+  style={{ width: "100%", height: "100%", maxWidth: "100%" }}
+>
   <g clipPath="url(#clip0_124_680)">
     {ballData.map((ball) => (
-      <circle key={ball.id} id={ball.id} cx={ball.cx} cy={ball.cy} r={ball.r} fill="#553EFF" repeat="-1" />
+      <circle
+        key={ball.id}
+        id={ball.id}
+        cx={ball.cx}
+        cy={ball.cy}
+        r={ball.r}
+        fill="#553EFF"
+        repeat="-1"
+      />
     ))}
     <path fill="url(#paint0_linear_124_680)" d="M0 -139H698V920H0z"></path>
   </g>

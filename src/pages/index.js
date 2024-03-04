@@ -12,8 +12,6 @@ const Home = () => {
       <>
         {/* <Head> */}
           <title>levelfive</title>
-        {/* </Head> */}
-   {/* <Navbar/> */}
         <Layout>
 <Header/>
         <Itsolution/>

@@ -6,10 +6,12 @@ export default function Itsolution() {
   return (
     <div style={{ backgroundColor: "#000" }}>
       <Container>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            
-          </Grid>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Grid container spacing={2} sx={{paddingBottom:"0vh"}}>
+          
           <Grid container spacing={2} sx={{paddingLeft:"5vh"}}>
             <Grid item xs={12} md={6}>
               <Box padding={{ xs: "vh ", md: "10vh" }}>
@@ -19,9 +21,9 @@ export default function Itsolution() {
     // Adjust font size based on breakpoints
     fontSize: {
       xs: "8px", // for extra-small screens
-      sm: "18px", // for small screens
-      md: "20px", // for medium screens
-      lg: "22px", // for large screens
+      sm: "8px", // for small screens
+      md: "10px", // for medium screens
+      lg: "14px", // for large screens
       xl: "24px"  // for extra-large screens
     },
     // Add other styles as needed
@@ -33,7 +35,7 @@ export default function Itsolution() {
                  <Typography
                    sx={{
                      fontFamily: "",
-                     fontSize: { xs: "0.7vh", md: "3.5vh" },
+                     fontSize: { xs: "2.7vh", md: "3.6vh" },
                      fontWeight: "600",
                      lineHeight: "40px",
                      letterSpacing: "0em",
@@ -42,24 +44,30 @@ export default function Itsolution() {
                      gap:"vh"
                    }}
                  >
-                   Tailored IT Solutions in Riyadh <br />
-                   <span style={{ color:"#fff" }}>Approach to Cost-Effectiveness</span>
+                   Tailored IT Solutions in Riyadh 
+                   <span style={{ color:"#fff" }}> Approach to Cost-Effectiveness</span>
                  </Typography>
-                 <Box sx={{ borderBottom:"0.5vh solid #8868F9" ,maxWidth:"12vw" }} />
+                 <Box sx={{ borderBottom:"0.5vh solid #8868F9" ,maxWidth:{xs:"34vw",md:"12vw"} }} />
                  <Box sx={{
-  paddingTop: { xs: "2vh", sm: "3vh", md: "30vh" },
-  paddingLeft: { xs: "vh", sm: "vh", md: "vh" },
-paddingRight:  { xs: "6vh", sm: "vh"}
+  paddingTop: { xs: "vh", sm: "3vh", md: "25vh" },
+  paddingLeft: { xs: "25vh", sm: "vh", md: "6vh" },
+paddingRight:  { xs: "vh", sm: "vh"}
+
 }}>
 Copy code
 <Button 
   variant="contained" 
   sx={{
     backgroundColor: "#553EFF",
-    width: { xs: '50%', sm: '40%' }, // Adjust width for different breakpoints
-    height: { xs: '25px', sm: '30px' } ,
-    fontSize: {
-      xs: "0.8vh", // Font size on extra-small screens
+    width: { xs: '100%', sm: '40%' }, // Adjust width for different breakpoints
+    height: { xs: '28px', sm: '35px' } ,
+    paddingLeft: {
+      xs: ".4vh", // Font size on extra-small screens
+      sm: "18px", // Font size on small screens
+      md: "7px"  // Font size on medium screens and above
+    }// Adjust height for different breakpoints
+   , fontSize: {
+      xs: "1.2vh", // Font size on extra-small screens
       sm: "18px", // Font size on small screens
       md: "7px"  // Font size on medium screens and above
     }// Adjust height for different breakpoints
@@ -71,7 +79,8 @@ Copy code
               </Box>  
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box sx={{ paddingLeft: { xs: "0", md: "7vh" } }}>
+             
+              <Box sx={{ paddingLeft: { xs: "0", md: "10vh" } ,width: { xs: "50vh", md: "93.5vh" }}}>
                 <Typography sx={{ color:"#fff" }}>
                   We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
                 </Typography>

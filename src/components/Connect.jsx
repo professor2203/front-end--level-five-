@@ -11,7 +11,7 @@ export default function Connect() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh', // Set the height to fill the viewport
+          height: {xs:"40vh",md:"100vh"}, // Set the height to fill the viewport
         }}
       >
     <Box
@@ -20,10 +20,10 @@ export default function Connect() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: '',
-          height: '100vh', // Set the height to fill the viewport
+          height: '50vh', // Set the height to fill the viewport
         }}
       >
-        <Box sx={{ textAlign: 'center', marginBottom: '2rem',paddingLeft:"25vh" }}>
+        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"25",md:"25"} }}>
               
           <Typography  sx={{ color: '#fff' , fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
             Please drop us an email at
@@ -32,7 +32,7 @@ export default function Connect() {
             variant="h4"
             sx={{
               color: '#fff',
-              fontSize: { xs: '2vh', sm: '4vh', md: '5vh', lg: '6vh', xl: '7vh' }, // Adjust font size based on breakpoints
+              fontSize: { xs: '3vh', sm: '4vh', md: '5vh', lg: '6vh', xl: '7vh' }, // Adjust font size based on breakpoints
             }}
           >
             connect<span style={{ color: '#553EFF' }}>@Level5.com.sa</span>

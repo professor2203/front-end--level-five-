@@ -34,7 +34,7 @@ export function IconLine() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40vw"
+      width="60vw"
       height="80vh"
       fill="none"
       viewBox="0 0 411 401"

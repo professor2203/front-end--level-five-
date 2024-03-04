@@ -55,7 +55,19 @@ function ResponsiveCard() {
   };
 
   return (
-      <Box sx={{ flexGrow: 1 }}>
+    
+    <Box sx={{ flexGrow: 1 }}>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+        
         <Grid container spacing={2} justifyContent="center">
           <Grid item xs={12}>
             <Paper elevation={3} sx={{ p: 2, textAlign: 'center' }}>

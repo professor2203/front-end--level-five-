@@ -41,15 +41,15 @@ export default function Navbar() {
       <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: "inherit" }}>
         {/* Logo and Links */}
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Typography variant="h6" component="div">
-            <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="Logo" style={{ width: isSmallScreen ? '40px' : '80px' }} />
+          <Typography  component="div">
+            <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="Logo" style={{ width: isSmallScreen ? '12vh' : '25vh' }} />
           </Typography>
 
           {/* Show Links only on large screens */}
           {!isSmallScreen && (
-            <div style={{ display: 'flex', alignItems: '', marginLeft: '60vh' }}>
+            <div style={{ display: 'flex', alignItems: '', marginLeft: '50vh' }}>
               {links.map((link, index) => (
-                <a key={index} href={link.url} style={{ marginRight: '80px', textDecoration: 'none', color: 'inherit' }}>
+                <a key={index} href={link.url} style={{ marginRight: '70px', textDecoration: 'none', color: 'inherit' }}>
                   {link.title}
                 </a>
               ))}

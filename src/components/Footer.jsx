@@ -30,8 +30,8 @@ export default function Footer() {
     src="./thumbnail_Master_logo_white 2.svg"
     alt=""
     style={{
-      maxHeight: { xs: '6vh', sm: '8vh' }, // Adjust based on screen size
-      maxWidth: '100%', // Ensure image doesn't exceed container width
+      maxHeight: { xs: '4vh', sm: '8vh' }, // Adjust based on screen size
+      maxWidth: '30%', // Ensure image doesn't exceed container width
       width: 'auto', // Maintain aspect ratio
       height: 'auto', // Maintain aspect ratio
     }}
@@ -52,7 +52,7 @@ export default function Footer() {
         </Box>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <Box display="flex" justifyContent={{ xs: 'center', sm: 'flex-end' }} paddingTop={{ xs: '2vh', sm: 0 }}>
+        <Box display="flex" justifyContent={{ xs: 'end', sm: 'flex-end' }} paddingTop={{ xs: '2vh', sm: 0 }}>
           <Typography    sx={{ color: "#fff" }}>
             © 2020 UXTheme, All
           </Typography>

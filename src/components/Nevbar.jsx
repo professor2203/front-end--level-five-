@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, useMediaQuery, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const links = [
@@ -11,8 +11,8 @@ const links = [
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [showLinks, setShowLinks] = useState(false);
   const [loading, setLoading] = useState(true);
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
 
   useEffect(() => {
     // Simulate loading delay
@@ -32,71 +32,72 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+  const handleMenuIconMouseEnter = () => {
+    setShowLinks(true);
+  };
+
+  const handleMenuIconMouseLeave = () => {
+    setShowLinks(false);
+  };
+
   if (loading) {
     return null; // Render nothing until loading is complete
   }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
+    <div style={{paddingRight:"vh",background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)'}}>
+  
+  <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
       <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: "inherit" }}>
         {/* Logo and Links */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Typography  component="div">
-            <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="Logo" style={{ width: isSmallScreen ? '12vh' : '25vh' }} />
-          </Typography>
-
-          {/* Show Links only on large screens */}
-          {!isSmallScreen && (
-            <div style={{ display: 'flex', alignItems: '', marginLeft: '50vh' }}>
-              {links.map((link, index) => (
-                <a key={index} href={link.url} style={{ marginRight: '70px', textDecoration: 'none', color: 'inherit' }}>
-                  {link.title}
-                </a>
-              ))}
-              <Button variant="contained" sx={{backgroundColor:"#553EFF",fontSize:"1.3vh",height:"6.5vh"}}>
-              Book an Appoinment
-              </Button>
-            </div>
-          )}
-        </div>
+        <Typography variant="h6" component="div">
+        </Typography>
         
-        {/* Hamburger Icon and Links */}
-        {isSmallScreen && (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <IconButton
-              size="large"
-              edge="end"
-              color="inherit"
-              aria-label="menu"
-              aria-controls="menu"
-              aria-haspopup="true"
-              onClick={handleClick}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu"
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-            >
-              {links.map((link, index) => (
-                <MenuItem key={index} onClick={handleClose}>
-                  {link.title}
-                </MenuItem>
-              ))}
-            </Menu>
+        {/* Menu Icon and Links */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: "" }}>
+          <div style={{ display: showLinks ? 'block' : 'none', textAlign: 'center' }}>
+            {links.map((link, index) => (
+              <a key={index} href={link.url} style={{ marginRight: '80px', textDecoration: 'none', color: 'inherit' }}>
+                {link.title}
+              </a>
+            ))}
           </div>
-        )}
+          <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            aria-controls="menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+            onMouseEnter={handleMenuIconMouseEnter}
+            onMouseLeave={handleMenuIconMouseLeave}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+            {links.map((link, index) => (
+              <MenuItem key={index} onClick={handleClose}>
+                {link.title}
+              </MenuItem>
+            ))}
+          </Menu>
+        </div>
       </Toolbar>
     </AppBar>
+</div>
   );
 }

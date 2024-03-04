@@ -5,6 +5,8 @@ import Design2 from './Design2';
 
 export default function Story() {
   return (
+    <div style={{
+      background: 'linear-gradient(143deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 51%, rgba(7,4,66,0.9051995798319328) 100%)   ',   }}>
     <Container>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}></Grid>
@@ -46,5 +48,6 @@ export default function Story() {
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 }

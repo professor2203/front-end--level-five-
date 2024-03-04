@@ -20,7 +20,10 @@ export default function Footer() {
   }
 
   return (
-    <Grid container spacing={3} sx={{ borderTop: '0.5px solid #ffffff', paddingTop: '2vh', paddingBottom: '2vh' }}>
+    <div style={{
+      background: 'linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(1,1,12,1) 0%, rgba(7,4,66,0.9051995798319328) 33%, rgba(0,0,0,1) 45%, rgba(7,4,66,0.9051995798319328) 73%)'}}>
+
+     <Grid container spacing={3} sx={{ borderTop: '0.5px solid #ffffff', paddingTop: '2vh', paddingBottom: '2vh' }}>
       <Grid item xs={12} sm={6} md={4}>
       <Box
   display="flex"
@@ -59,5 +62,6 @@ export default function Footer() {
         </Box>
       </Grid>
     </Grid>
+  </div>
   );
 }

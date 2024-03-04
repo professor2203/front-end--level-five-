@@ -149,15 +149,33 @@ const ballData = [
   {id:"ball135" ,cx:693.918 ,  cy:916.164 ,  r:4.08187},
 ]
 export function Icon() {
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+  // useEffect(() => {
+  //   const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
 
-    // Map over the ballData array to create SVG elements and animations
+  //   // Map over the ballData array to create SVG elements and animations
+  //   ballData.forEach((ball) => {
+  //     tl.to(`#${ball.id}`, { duration: 0.8, opacity: 0.4, yoyo: true, repeat: -1 },"-=1.45");
+  //   });
+
+  //   return () => tl.kill(); // Kill the timeline on component unmount
+  // }, []);
+  useEffect(() => {
+    const masterTimeline = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+
     ballData.forEach((ball) => {
-      tl.to(`#${ball.id}`, { duration: 0.5, opacity: 0.5, yoyo: true, repeat: -1 },"-=1.45");
+      const tl = gsap.timeline();
+
+      // Animate each ball's opacity
+      tl.to(`#${ball.id}`, { duration: 1, opacity: 0.5, yoyo: true, repeat: -1 });
+
+      // Move the color across each ball
+      tl.to(`#${ball.id}`, {  duration: 10, ease: "power2.inOut" }, 0);
+
+      // Add the individual ball timeline to the master timeline
+      masterTimeline.add(tl, 0);
     });
 
-    return () => tl.kill(); // Kill the timeline on component unmount
+    return () => masterTimeline.kill(); // Kill the master timeline on component unmount
   }, []);
 
   return (

@@ -4,6 +4,8 @@ import { Box, Typography } from '@mui/material';
 
 export default function Connect() {
   return (
+    <div style={{
+      background: 'linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(1,1,12,1) 0%, rgba(7,4,66,0.9051995798319328) 33%, rgba(0,0,0,1) 45%, rgba(7,4,66,0.9051995798319328) 73%)'}}>
     <Container>
       <Box
         sx={{
@@ -23,7 +25,7 @@ export default function Connect() {
           height: '50vh', // Set the height to fill the viewport
         }}
       >
-        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"25",md:"25"} }}>
+        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"25vh",md:"25vh"} }}>
               
           <Typography  sx={{ color: '#fff' , fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
             Please drop us an email at
@@ -41,5 +43,6 @@ export default function Connect() {
       </Box>
       </Box>
     </Container>
+    </div>
   );
 }

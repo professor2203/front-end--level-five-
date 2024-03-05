@@ -5,16 +5,17 @@ import { Grid, Typography, Box ,Button} from '@mui/material';
 export default function Itsolution() {
   return (
     <div style={{ backgroundColor: "#000" }}>
+      <br />
+      <br />
+      <br />
+      <br />
       <Container>
-        <br />
-        <br />
-        <br />
-        <br />
+        
         <Grid container spacing={2} sx={{paddingBottom:"0vh"}}>
           
           <Grid container spacing={2} sx={{paddingLeft:"5vh"}}>
-            <Grid item xs={12} md={6}>
-              <Box padding={{ xs: "vh ", md: "10vh" }}>
+            <Grid item xs={12} md={6} sx={{paddingBottom:"0vh"}}>
+              <Box paddingLeft={{ xs: "vh ", md: "5vh" }}>
               <Typography
   sx={{
     color: "#fff",
@@ -49,8 +50,8 @@ export default function Itsolution() {
                  </Typography>
                  <Box sx={{ borderBottom:"0.5vh solid #8868F9" ,maxWidth:{xs:"34vw",md:"12vw"} }} />
                  <Box sx={{
-  paddingTop: { xs: "vh", sm: "3vh", md: "25vh" },
-  paddingLeft: { xs: "25vh", sm: "vh", md: "6vh" },
+  paddingTop: { xs: "vh", sm: "3vh", md: "20vh" },
+  paddingLeft: { xs: "25vh", sm: "vh", md: "8vh" },
 paddingRight:  { xs: "vh", sm: "vh"}
 
 }}>
@@ -80,7 +81,7 @@ Copy code
             </Grid>
             <Grid item xs={12} md={6}>
              
-              <Box sx={{ paddingLeft: { xs: "0", md: "10vh" } ,width: { xs: "45vh", md: "93.5vh" }}}>
+              <Box sx={{ paddingLeft: { xs: "0", md: "20vh" } ,width: { xs: "45vh", md: "93.5vh" }}}>
                 <Typography sx={{ color:"#fff" }}>
                   We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
                 </Typography>
@@ -99,14 +100,7 @@ Copy code
           </Grid>
         </Grid>
           
-        <Grid container spacing={2} sx={{paddingLeft:"5vh"}}>
-          <Grid item xs={12} md={6}>
-             
-          </Grid>
-          <Grid item xs={12} md={6}>
-            
-          </Grid>
-        </Grid>
+        
       </Container>
     </div>
   );

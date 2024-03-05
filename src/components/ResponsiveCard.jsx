@@ -65,7 +65,7 @@ function ResponsiveCard() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#1B1B1F", minHeight: "50vh", minWidth: "57.5vh" }}>
+      <div style={{ backgroundColor: "#1B1B1F", minHeight: "85vh", minWidth: "100%" }}>
         <Box sx={{}}>
           <Typography sx={{}}></Typography>
         </Box>
@@ -171,10 +171,10 @@ function ResponsiveCard() {
                         alt=""
                         style={{ width: "8vh", paddingBottom: "3vh" }}
                       />
-                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "1vh", md: "" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "bold" }}>
+                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "vh", md: "2vh" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "" }}>
                         {image.label}
                       </Typography>
-                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: ".5vh", md: "" }, }}>
+                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: "1.5vh", md: "2vh" }, }}>
                         {image.description}
                       </Typography>
                     </CardContent>

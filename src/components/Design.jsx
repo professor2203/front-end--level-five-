@@ -183,7 +183,7 @@ export function Icon() {
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 650 900"
   fill="none"
-  style={{ width: "100%", height: "100%", maxWidth: "100%" }}
+  style={{ width: "80%", height: "80%", maxWidth: "100%" }}
 >
   <g clipPath="url(#clip0_124_680)">
     {ballData.map((ball) => (

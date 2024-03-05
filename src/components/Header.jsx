@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <div style={{paddingRight:"vh",background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)',}}>
+      <div style={{paddingRight:"vh",background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)',  }}>
       <Container>
        <Grid container spacing={2}>
           {/* Left Grid Item */}
@@ -46,6 +46,7 @@ export default function Header() {
           <Grid item xs={6} md={6}>
             <Box sx={{ paddingLeft: '40%', paddingTop: { xs: "5vh", md: "10vh" }, width: { xs: "28vh", md: "70vh" } }}>
               <Design />
+              asim
             </Box>
           </Grid>
           {/* Bottom Grid Item */}

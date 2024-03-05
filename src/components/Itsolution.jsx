@@ -59,15 +59,15 @@ Copy code
   variant="contained" 
   sx={{
     backgroundColor: "#553EFF",
-    width: { xs: '100%', sm: '40%' }, // Adjust width for different breakpoints
-    height: { xs: '28px', sm: '35px' } ,
+    width: { xs: '5vh', sm: '40%' }, // Adjust width for different breakpoints
+    height: { xs: '36px', sm: '35px' } ,
     paddingLeft: {
-      xs: ".4vh", // Font size on extra-small screens
+      xs: "vh", // Font size on extra-small screens
       sm: "18px", // Font size on small screens
       md: "7px"  // Font size on medium screens and above
     }// Adjust height for different breakpoints
    , fontSize: {
-      xs: "1.2vh", // Font size on extra-small screens
+      xs: "1vh", // Font size on extra-small screens
       sm: "18px", // Font size on small screens
       md: "7px"  // Font size on medium screens and above
     }// Adjust height for different breakpoints
@@ -80,7 +80,7 @@ Copy code
             </Grid>
             <Grid item xs={12} md={6}>
              
-              <Box sx={{ paddingLeft: { xs: "0", md: "10vh" } ,width: { xs: "50vh", md: "93.5vh" }}}>
+              <Box sx={{ paddingLeft: { xs: "0", md: "10vh" } ,width: { xs: "45vh", md: "93.5vh" }}}>
                 <Typography sx={{ color:"#fff" }}>
                   We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
                 </Typography>

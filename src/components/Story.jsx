@@ -5,14 +5,14 @@ import Design2 from './Design2';
 
 export default function Story() {
   return (
-    <div style={{
+    <div style={{minHeight:"100vh",minWidth:"52.2vh",
       background: 'linear-gradient(143deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 51%, rgba(7,4,66,0.9051995798319328) 100%)   ',   }}>
     <Container>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} sx={{maxHeight:"20vh"}}>
         <Grid item xs={12} md={6}></Grid>
         <Grid container spacing={2} sx={{ paddingTop: { xs: "0", md: "vh" } }}>
           <Grid item xs={12} md={6}>
-            <Box sx={{ paddingLeft: { xs: "6vh", md: "vh" },height: { xs: "20vh", md: "vh" },paddingRight: { xs: "", md: "vh" } }}>
+            <Box sx={{ paddingLeft: { xs: "6vh", md: "vh" },height: { xs: "30vh", md: "vh" },paddingRight: { xs: "", md: "vh" } }}>
               <Design2 />
             </Box>
           </Grid>

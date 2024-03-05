@@ -51,7 +51,8 @@ export default function Header() {
           {/* Bottom Grid Item */}
           <Grid item xs={12}>
                 
-              <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="" style={{ paddingLeft: "4.5vh", width: "45vh", }} />
+          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="" style={{ paddingLeft: isSmallScreen ? "15.5vh" : "4.5vh", width: isSmallScreen ? "30vh" : "15vh" }} />
+
             
           </Grid>
         </Grid>

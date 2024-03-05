@@ -32,6 +32,14 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+  const handleLogoMouseEnter = () => {
+    setShowLinks(true);
+  };
+
+  const handleLogoMouseLeave = () => {
+    setShowLinks(false);
+  };
+
   const handleMenuIconMouseEnter = () => {
     setShowLinks(true);
   };
@@ -45,12 +53,16 @@ export default function Navbar() {
   }
 
   return (
-    <div style={{paddingRight:"vh",background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)'}}>
-  
-  <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
+    <div style={{ background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)', }}>
+   
+   <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
       <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: "inherit" }}>
         {/* Logo and Links */}
-        <Typography variant="h6" component="div">
+        <Typography variant="h6" component="div"
+          onMouseEnter={handleLogoMouseEnter}
+          onMouseLeave={handleLogoMouseLeave}
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
         </Typography>
         
         {/* Menu Icon and Links */}
@@ -98,6 +110,6 @@ export default function Navbar() {
         </div>
       </Toolbar>
     </AppBar>
-</div>
+  </div>
   );
 }

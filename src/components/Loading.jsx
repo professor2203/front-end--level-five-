@@ -25,7 +25,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="loading">
+    <div className="loading" style={{background: 'linear-gradient(143deg, rgba(0,0,0,1) 1%, rgba(7,4,66,1) 47%, rgba(1,1,12,1) 89%)',height:"97.6vh"}}>
       <div className="h-screen">
         <div className={`text-center relative transform scale-75 top-40 z-10 ${is600 ? styles.smallScreen : styles.largeScreen}`}>
           <Image

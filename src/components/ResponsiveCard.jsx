@@ -7,45 +7,38 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
-import Work from './Work';
 import React, { useState, useEffect } from "react";
-import {  Divider } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const sections = [
-  { label: "Requirements", content: "San  Bay Bridge, located in the United States." },
-  { label: "System Design", content: "A beautiful bird perched on a tree branch." },
-  { label: "Development", content: "A stunning view of Bali, Indonesia." },
-  { label: "Testing", content: "Scenic view of Goč, a  in Serbia." },
-
+  { label: "Requirements", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency." },
+  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
+  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
+  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
 ];
-
-
 
 const images = [
   {
     label: 'IT Group Services',
     src: './1 (1).svg',
-    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
+    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
   },
   {
     label: 'Data Center & Cloud Services',
     src: './2 (1).svg',
-    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth..',
-  },
-  {
-    label: 'Emerging Technologies',
-    src: './3 (1).svg',
     description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
   },
   {
     label: 'Emerging Technologies',
     src: './3 (1).svg',
-    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
+    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
+  },
+  {
+    label: 'Emerging Technologies',
+    src: './3 (1).svg',
+    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
   },
 ];
 
@@ -53,23 +46,9 @@ function ResponsiveCard() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const [showContact, setShowContact] = useState(false);
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % images.length);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) =>
-      prevActiveStep === 0 ? images.length - 1 : prevActiveStep - 1
-    );
-  };
-
-  const toggleContact = () => {
-    setShowContact((prevShowContact) => !prevShowContact);
-  };
   const [activeSection, setActiveSection] = useState(null);
+  const [activeImage, setActiveImage] = useState(null);
   const isLargeScreen = useMediaQuery("(max-width:900px)");
-  const isLargeScreen2 = useMediaQuery("(min-width:900px)");
 
   useEffect(() => {
     // Set the active section to the index of the "Requirements" section initially
@@ -77,193 +56,141 @@ function ResponsiveCard() {
     setActiveSection(initialSectionIndex);
   }, []);
 
-  const handleClick = (index) => {
+  const handleClickSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
   };
 
+  const handleClickImage = (index) => {
+    setActiveImage(activeImage === index ? null : index);
+  };
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % images.length);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => (prevActiveStep === 0 ? images.length - 1 : prevActiveStep - 1));
+  };
+
+  const toggleContact = () => {
+    setShowContact((prevShowContact) => !prevShowContact);
+  };
 
   return (
-<>
-<br />
-<br />
-
-<div style={{backgroundColor:"#1B1B1F"}}> 
-
-
-
-<Box sx={{}}>
-<Typography sx={{}}>
-
-</Typography>
-
-
-
-
-
-
-
-
-
-
-
-
-</Box>
-<br />
-      <br />
-      <br />
-    
-<Box sx={{ flexGrow: 0}}>
-     
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
-        <Button size="small" onClick={handleBack}>
-          <KeyboardArrowLeft />
-        </Button>
-        <Button size="small" onClick={handleNext}>
-          <KeyboardArrowRight />
-        </Button>
-      </Box>
-      <Grid container spacing={2} justifyContent="end">
-     
-     
-     
-     
-     
-      <Grid item  xs={12} sm={12} md={4}>
-      <Box sx={{ paddingX: "8%" }}>
-        <Grid container my={2} spacing={2}>
-          <Grid item xs={12} md={6} sm={6} lg={2} xl={4}>
-             {sections.map((section, index) => (
-              <div key={index}>
-                <Button
-                  sx={{
-                    color: "#ffff",
-                    fontFamily: "Clash Display",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    lineHeight: "normal",
-                  }}
-                  onClick={() => handleClick(index)}
-                >
-                  {section.label}
-                </Button>
-                <Divider sx={{ borderColor: "#D0140F", marginTop: "10px" }} />
-                {activeSection === index && isLargeScreen && (
-                  <Box>
-                    <Typography
-                      sx={{
-                        color: "#ffff",
-                        fontFamily: "Clash Display",
-                        fontSize: "20px",
-                        fontWeight: "400",
-                        lineHeight: "normal",
-                        mb: "15px",
-                      }}
-                    >
-                      {section.label}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        color: "#ffff",
-                        fontFamily: "Clash Display",
-                        fontSize: "12px",
-                        fontWeight: "400",
-                        lineHeight: "normal",
-                        letterSpacing: "0.4px",
-                        inline: "block",
-                      }}
-                    >
-                      {section.content}
-                    </Typography>
-                  </Box>
-                )}
-              </div>
-            ))} 
-          </Grid>
-            {activeSection !== null && (
-              <div style={{width:"70vh"}}>
-                <Typography
-                  sx={{
-                    color: "black",
-                    fontFamily: "Clash Display",
-                    fontSize: "26px",
-                    fontWeight: "400",
-                    lineHeight: "normal",
-                    mb: "15px",
-                  }}
-                >
-                  {sections[activeSection].label}
-                </Typography>
-                <Typography
-                  sx={{
-                    color: "black",
-                    fontFamily: "Clash Display",
-                    fontSize: "15px",
-                    fontWeight: "400",
-                    lineHeight: "normal",
-                    letterSpacing: "0.4px",
-                    inline: "",
-                  }}
-                >
-                  {sections[activeSection].content}
-                </Typography>
-              </div>
-            )}  
-        </Grid>
-      </Box>
-      </Grid>
-      
-      
-      
-      
-      
-      
-       {images.map((image, index) => (  
-          <Grid item key={index} xs={2} sm={6} md={2}>
-            <Paper elevation={3} sx={{ p: 0, textAlign: 'start' ,backgroundColor:"black"}}>
-              <Card
-                sx={{
-                  maxWidth: 245,
-                  mt: 2,
-                  bgcolor: activeStep === index ? '#553EFF' : 'black',
-               
-                }}
-                onClick={() => setActiveStep(index)}
-              >
-                
-               
-                <CardContent>
-                <img src=  
-                  {image.src}
-                  
-                alt="" />
-                  <Typography gutterBottom variant="" component="div" sx={{fontSize:"3vh" ,color: activeStep === index ? 'black' : '#ffff' }}>
-                    {image.label}
-                  </Typography>
-                  <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff' }}>
-                    {image.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Paper>
-          </Grid>
-        ))}
-         
-        
-      </Grid>
-      
-      {showContact && (
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-          {/* Add your contact information here */}
-          <Typography variant="h6">Contact Information</Typography>
-          <Typography variant="body1">Phone: +1234567890</Typography>
-          <Typography variant="body1">Email: example@example.com</Typography>
+    <>
+      <div style={{backgroundColor:"#1B1B1F", minHeight:"70vh",minWidth:"52.5vh"}}>
+        <Box sx={{}}>
+          <Typography sx={{}}></Typography>
         </Box>
-      )}
-    </Box>
-   <br />
-   <br />
-   <br />
-    </div>
+        <br />
+        <br />
+        <br />
+        <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
+            <Button size="small" onClick={handleBack}>
+              <KeyboardArrowLeft />
+            </Button>
+            <Button size="small" onClick={handleNext}>
+              <KeyboardArrowRight />
+            </Button>
+          </Box>
+          <Grid container spacing={2} justifyContent="end">
+            <Grid item xs={12} sm={12} md={4}>
+              <Box sx={{ paddingX: "8%" }}>
+                <Grid container my={2} spacing={2}>
+                  <Grid item xs={3} md={6} sm={6} lg={2} xl={4}>
+                    {sections.map((section, index) => (
+                      <div key={index}>
+                        <Button
+                          sx={{
+                            color: "#ffff",
+                            fontFamily: "Clash Display",
+                            fontSize: "10px",
+                            fontWeight: "100",
+                            lineHeight: "normal",
+                            width:""
+                          }}
+                          onClick={() => handleClickSection()}
+                        >
+                          {section.label} <ExpandMoreIcon />
+                        
+                        </Button>
+                        {activeSection === index && isLargeScreen && (
+                          <Box>
+                            <Typography
+                              sx={{
+                                color: "#ffff",
+                                fontFamily: "Clash Display",
+                                fontSize: "20px",
+                                fontWeight: "400",
+                                lineHeight: "normal",
+                                mb: "15px",
+                              }}
+                            >
+                              {section.label}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                color: "#ffff",
+                                fontFamily: "Clash Display",
+                                fontSize: "12px",
+                                fontWeight: "400",
+                                lineHeight: "normal",
+                                letterSpacing: "0.4px",
+                                inline: "block",
+                              }}
+                            >
+                              {section.content}
+                            </Typography>
+                          </Box>
+                        )}
+                      </div>
+                    ))}
+                  </Grid>
+                </Grid>
+              </Box>
+            </Grid>
+            {images.map((image, index) => (
+              <Grid item key={index} xs={3} sm={6} md={2}>
+                <Paper elevation={3} sx={{ p: 0, textAlign: 'start', backgroundColor: "black" }}>
+                  <Card
+                    sx={{
+                      maxWidth: 245,
+                      mt: 2,
+                      bgcolor: activeStep === index ? '#553EFF' : 'black',
+                    }}
+                    onClick={() => handleClickImage(index)}
+                  >
+                    <CardContent>
+                      <img
+                        src={image.src}
+                        alt=""
+                        style={{ width: "8vh", paddingBottom: "3vh" }}
+                      />
+                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "1vh", md: "" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "bold" }}>
+                        {image.label}
+                      </Typography>
+                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: ".5vh", md: "" }, }}>
+                        {image.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+
+          {showContact && (
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+              {/* Add your contact information here */}
+              <Typography variant="h6">Contact Information</Typography>
+              <Typography variant="body1">Phone: +1234567890</Typography>
+              <Typography variant="body1">Email: example@example.com</Typography>
+            </Box>
+          )}
+        </Box>
+        
+      </div>
     </>
   );
 }

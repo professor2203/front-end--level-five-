@@ -19,11 +19,11 @@ export default function CustomFooter() {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4}>
           <Box display="flex" justifyContent={isSm ? 'start' : 'flex-start'} alignItems="center">
-            <img src="./thumbnail_Master_logo_white 2.svg" alt="Logo" style={{ maxWidth: '50%', height: 'auto' }} />
+            <img src="./thumbnail_Master_logo_white 2.svg" alt="Logo" style={{ maxWidth: '40%', height: 'auto' }} />
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '2vh', sm: 0 }}>
+          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '1.5vh', sm: 0 }}>
             <Typography variant="body1" style={{ color: "#fff", marginRight: '1rem' }}>
               <Link href="/support" color="inherit" underline="none">Support</Link>
             </Typography>
@@ -36,7 +36,7 @@ export default function CustomFooter() {
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '2vh', sm: 0 }}>
+          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '1.5vh', sm: 0 }}>
             <Typography style={{ color: "#fff" }}>
               © 2020 UXTheme, All
             </Typography>

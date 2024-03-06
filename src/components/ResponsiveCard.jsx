@@ -20,10 +20,10 @@ const sections = [
 ];
 
 const images = [
-  { label: 'IT Group Services', src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.' },
-  { label: 'Data  Cloud Services', src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.' },
+  { label: 'IT Group Services', src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers  .   Seamlessly empower growth.' },
+  { label: 'Data  Cloud Services', src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers.  Seamlessly empower growth.' },
+  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
+  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
 ];
 
 function ResponsiveCard() {
@@ -65,13 +65,11 @@ function ResponsiveCard() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#1B1B1F", minHeight: "85vh", minWidth: "100%" }}>
+      <div style={{ backgroundColor: "#1B1B1F", minHeight: "100%", minWidth: "100%" }}>
         <Box sx={{}}>
           <Typography sx={{}}></Typography>
         </Box>
-        <br />
-        <br />
-        <br />
+
         <Box sx={{ flexGrow: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
             <Button size="small" onClick={handleBack}>
@@ -85,13 +83,13 @@ function ResponsiveCard() {
             <Grid item xs={12} md={4}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
               <Box  sx={{}}>
-                   <Typography sx={{fontWeight:"bold",fontSize:"3.5vh",color:"#fff"}}>
+                   <Typography sx={{fontWeight:"bold",fontSize:{xs:"3.5vh",},color:"#fff"}}>
                    Our Solutions & Service Offering
                    </Typography>
                    <Typography sx={{fontSize:"3.5vh",color:"#fff"}}>
                    End-to-End Solutions for You
                    </Typography>
-<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"11vh",md:"21vh"}}}></Box>
+<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"22vh",md:"21vh"}}}></Box>
                    </Box>
 
                 <Grid container my={2} spacing={2}>
@@ -127,7 +125,7 @@ function ResponsiveCard() {
                                 fontSize: "20px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
-                                mb: "15px",
+                                mb: "px",
                               }}
                             >
                               {section.label}
@@ -154,11 +152,11 @@ function ResponsiveCard() {
               </Box>
             </Grid>
             {images.map((image, index) => (
-              <Grid item key={index} xs={3} sm={3} md={2}>
+              <Grid item key={index} xs={6} sm={3} md={2}>
                 <Paper elevation={3} sx={{ p: 0, textAlign: 'center', backgroundColor: "black" }}>
                   <Card
                     sx={{
-                      maxWidth: 245,
+                      maxWidth: "100%",
                       mt: 2,
                       bgcolor: activeStep === index ? '#553EFF' : 'black',
                
@@ -185,7 +183,7 @@ function ResponsiveCard() {
           </Grid>
 
           {showContact && (
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
               <Typography variant="h6">Contact Information</Typography>
               <Typography variant="body1">Phone: +1234567890</Typography>
               <Typography variant="body1">Email: example@example.com</Typography>
